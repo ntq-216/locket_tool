@@ -1,8 +1,10 @@
-#!name=Locket_Gold_By_Quan
+#!name=Locket_Gold_By_ntq-216
+#!desc=Mở khóa Locket Gold - Phiên bản chuẩn cho Quân (HUST)
 #!category=Script
 
 [Script]
-locket_gold = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/TÊN_CỦA_BẠN/TÊN_KHO/main/locket_hust.js, requires-body=true, timeout=60
+# Đánh chặn và sửa dữ liệu bản quyền từ RevenueCat
+locket_gold = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/ntq-216/locket_tool/main/locket_tool.sgmodule, requires-body=true, timeout=60
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com
