@@ -4,7 +4,7 @@
 
 [Script]
 # Mở khóa quyền lợi Premium
-locket_bypass = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/ntq-216/locket_tool/main/revenuecat.js, requires-body=true, timeout=60
+locket_bypass = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/ntq-216/locket_tool/main/locket_tool.js, requires-body=true, timeout=60
 
 # Xóa Header để ẩn danh tính (Bảo mật)
 delete_header = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/ntq-216/locket_tool/main/deleteHeader.js, timeout=60
