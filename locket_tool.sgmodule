@@ -1,0 +1,8 @@
+#!name=Locket_Gold_By_Quan
+#!category=Script
+
+[Script]
+locket_gold = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/TÊN_CỦA_BẠN/TÊN_KHO/main/locket_hust.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com
