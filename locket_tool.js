@@ -1,15 +1,4 @@
-/**
-
- * Clean Locket Gold Script for Quân
-
- * Mục tiêu: Bypass RevenueCat check cho Locket Gold
-
- */
-
-
-
 // 1. Lấy dữ liệu phản hồi từ server
-
 let body = $response.body;
 
 if (!body) $done({}); 
