@@ -1,10 +1,13 @@
-#!name=Locket_Gold_By_ntq-216
-#!desc=Mở khóa Locket Gold - Phiên bản chuẩn cho Quân (HUST)
+#!name=Locket_Gold_By_ntq216_HUST
+#!desc=Mở khóa Locket Gold & RevenueCat All-in-one (Bản cá nhân Quân HUST)
 #!category=Script
 
 [Script]
-# Đánh chặn và sửa dữ liệu bản quyền từ RevenueCat
-locket_gold = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/ntq-216/locket_tool/main/locket_tool.sgmodule, requires-body=true, timeout=60
+# Mở khóa quyền lợi Premium
+locket_bypass = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/ntq-216/locket_tool/main/revenuecat.js, requires-body=true, timeout=60
+
+# Xóa Header để ẩn danh tính (Bảo mật)
+delete_header = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/ntq-216/locket_tool/main/deleteHeader.js, timeout=60
 
 [MITM]
-hostname = api.revenuecat.com
+hostname = %APPEND% api.revenuecat.com
